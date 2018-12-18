@@ -27,6 +27,9 @@ fi
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 
+# old style - sorted most recently modified on top
+alias ll='ls -lAFt ${colorflag}'
+
 # List all files colorized in long format, excluding . and ..
 alias la="ls -lAF ${colorflag}"
 
