@@ -46,6 +46,19 @@ fi;
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
+
+# bash-git-prompt (viser git detaljer over prompt - https://github.com/magicmonty/bash-git-prompt)
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+    __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+      GIT_PROMPT_ONLY_IN_REPO=1
+      GIT_PROMPT_SHOW_UPSTREAM=1 # to show upstream tracking branch
+      GIT_PROMPT_SHOW_UNTRACKED_FILES=normal # can be no, normal or all; determines counting of untracked files
+      GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
+    source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
+
+
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults;
