@@ -1,0 +1,34 @@
+# Taps
+tap 'caskroom/cask'
+tap 'caskroom/eid'
+tap 'caskroom/fonts'
+tap 'caskroom/versions'
+tap 'homebrew/bundle'
+
+
+# Binaries
+brew 'awscli'
+brew 'archey'
+brew 'bash-completion'
+brew 'bash-git-prompt' # https://github.com/magicmonty/bash-git-prompt
+brew 'coreutils' # Those that come with macOS are outdated
+brew 'moreutils' # https://joeyh.name/code/moreutils/  and https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package/
+brew 'git'
+brew 'git-extras'
+brew 'mackup'
+brew 'mas' # Mac App Store command line interface - https://github.com/mas-cli/mas
+brew 'nmap'
+brew 'tree'
+
+
+# Quicklook
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'quicklook-csv'
+cask 'qlstephen'
+
+# Mac App Store
+mas 'Spark', id: 1176895641
+mas 'WhatsApp', id: 1147396723
+mas 'IP Scanner', id: 404167149
