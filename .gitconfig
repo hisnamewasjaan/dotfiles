@@ -3,6 +3,9 @@
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
+	# View a bit more info
+	gl = log --oneline --decorate --stat --graph
+
 	# View the current working tree status using the short format
 	s = status -s
 
@@ -78,6 +81,9 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
+
+	# check for whitespace errors
+	check-whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD
 
 [apply]
 
@@ -156,6 +162,15 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+
+[fetch]
+	prune = true
+
+[rebase]
+	autoStash = true
+
+[pull]
+	rebase = true
 
 [push]
 

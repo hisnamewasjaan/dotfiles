@@ -43,7 +43,6 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
-brew install php
 brew install gmp
 
 # Install font tools.
@@ -82,6 +81,8 @@ brew install xz
 brew install ack
 #brew install exiv2
 brew install git
+brew install git-extras
+brew install git-open
 brew install git-lfs
 brew install imagemagick --with-webp
 brew install lua
