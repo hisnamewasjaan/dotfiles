@@ -149,3 +149,21 @@ alias j7='sdk u java 7u141-zulu'
 
 # kogt
 alias kogt='open -a /Applications/Firefox.app/  http://localhost:16391/kontrologtilsyn/'
+
+# erst
+alias sag='cd ~/dev/erst/sag'
+
+# mount samba share - old school way
+alias logsnineo="mount -t smbfs //ni_jbe@10.0.97.17/logs-nine ~/temp/logs-nine"
+
+# mount samba share - with keychain access
+alias logsnine='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/logs-nine\"" -e "end try"'
+
+alias smbSagsstyring='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagsstyring\"" -e "end try"'
+alias smbSagslager='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagslager\"" -e "end try"'
+alias smbSagsindeks='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagsindeks\"" -e "end try"'
+
+# Pipe my public key to my clipboard.
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
+alias gw="./gradlew --console=verbose"
