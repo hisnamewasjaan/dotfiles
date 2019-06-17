@@ -167,3 +167,6 @@ alias smbSagsindeks='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
 alias gw="./gradlew --console=verbose"
+
+
+alias oraclejava8='export JAVA_HOME=$(/usr/libexec/java_home -v1.8)'
