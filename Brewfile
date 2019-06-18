@@ -2,14 +2,12 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-eid"
 tap "homebrew/cask-fonts"
-#tap "homebrew/completions" #deprecated
-#tap "homebrew/cask-versions" #deprecated
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "homebrew/versions"
-#cask "java8"	#unavailable
-# Scalable batch and stream data processing
-#brew "apache-flink" #requires java1.8
+#tap "homebrew/versions" #deprecated
+cask "java"
+cask "adoptopenjdk8"
 # Graphical system information display for macOS
 brew "archey"
 # Automatic configure script builder
@@ -36,8 +34,6 @@ brew "consul"
 brew "coreutils"
 # Message bus system, providing inter-application communication
 brew "dbus"
-# JVM launching without the hassle of persistent JVMs
-#brew "drip" #Java1.8 required
 # Functional metaprogramming aware language built on Erlang VM
 brew "elixir"
 # Functional programming language for building browser-based GUIs
@@ -71,7 +67,7 @@ brew "httpie"
 # Time series, events, and metrics database
 brew "influxdb"
 # Publish-subscribe messaging rethought as a distributed commit log
-#brew "kafka" #Java1.8 required
+brew "kafka" #Java1.8 required
 # Build tool for Clojure
 brew "leiningen"
 # Asynchronous event library
@@ -87,7 +83,7 @@ brew "mackup"
 # Mac App Store command-line interface
 brew "mas"
 # Java-based project management
-#brew "maven" #Java1.7+ is required
+brew "maven" #Java1.7+ is required
 # High-performance, schema-free, document-oriented database
 brew "mongodb"
 # Collection of tools that nobody wrote when UNIX was young
@@ -108,7 +104,7 @@ brew "openssl@1.1"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # Draw UML diagrams
-#brew "plantuml" #Java required to install this formula
+brew "plantuml" #Java required to install this formula
 # Service monitoring system and time series database
 brew "prometheus"
 # Cross-platform application and UI framework
@@ -126,7 +122,7 @@ brew "s3cmd"
 # HTTP regression testing and benchmarking utility
 brew "siege"
 # Manage code quality
-#brew "sonarqube" #Java1.8+ required to install formula
+brew "sonarqube" #Java1.8+ required to install formula
 # Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
 # Granddaddy of HTML tools, with support for modern standards
