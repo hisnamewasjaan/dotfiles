@@ -5,7 +5,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-#tap "homebrew/versions" #deprecated
 cask "java"
 cask "adoptopenjdk8"
 # Graphical system information display for macOS
@@ -23,7 +22,6 @@ brew "bash-git-prompt"
 brew "node"
 # Asynchronous DNS library
 brew "c-ares"
-#brew "cctools" #findes ikke
 # Tool to obtain certs from Let's Encrypt and autoenable HTTPS
 brew "certbot"
 # Cross-platform make
@@ -104,7 +102,7 @@ brew "openssl@1.1"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # Draw UML diagrams
-brew "plantuml" #Java required to install this formula
+brew "plantuml"
 # Service monitoring system and time series database
 brew "prometheus"
 # Cross-platform application and UI framework
@@ -122,7 +120,7 @@ brew "s3cmd"
 # HTTP regression testing and benchmarking utility
 brew "siege"
 # Manage code quality
-brew "sonarqube" #Java1.8+ required to install formula
+brew "sonarqube"
 # Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
 # Granddaddy of HTML tools, with support for modern standards
@@ -137,8 +135,6 @@ brew "vim"
 brew "watch"
 cask "beyond-compare"
 cask "dropbox"
-#cask "gpgtools" #unavailable no Cask with this name exists
-#cask "gpgtools-beta" #unavailable no Cask with this name exists
 cask "intellij-idea"
 cask "iterm2"
 #cask "ip-scanner" #checksum failed
