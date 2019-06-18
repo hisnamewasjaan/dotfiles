@@ -2,14 +2,14 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-eid"
 tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/completions"
+#tap "homebrew/completions" #deprecated
+#tap "homebrew/cask-versions" #deprecated
 tap "homebrew/core"
 tap "homebrew/services"
 tap "homebrew/versions"
-cask "java8"
+#cask "java8"	#unavailable
 # Scalable batch and stream data processing
-brew "apache-flink"
+#brew "apache-flink" #requires java1.8
 # Graphical system information display for macOS
 brew "archey"
 # Automatic configure script builder
@@ -25,7 +25,7 @@ brew "bash-git-prompt"
 brew "node"
 # Asynchronous DNS library
 brew "c-ares"
-brew "cctools"
+#brew "cctools" #findes ikke
 # Tool to obtain certs from Let's Encrypt and autoenable HTTPS
 brew "certbot"
 # Cross-platform make
@@ -37,7 +37,7 @@ brew "coreutils"
 # Message bus system, providing inter-application communication
 brew "dbus"
 # JVM launching without the hassle of persistent JVMs
-brew "drip"
+#brew "drip" #Java1.8 required
 # Functional metaprogramming aware language built on Erlang VM
 brew "elixir"
 # Functional programming language for building browser-based GUIs
@@ -71,7 +71,7 @@ brew "httpie"
 # Time series, events, and metrics database
 brew "influxdb"
 # Publish-subscribe messaging rethought as a distributed commit log
-brew "kafka"
+#brew "kafka" #Java1.8 required
 # Build tool for Clojure
 brew "leiningen"
 # Asynchronous event library
@@ -87,7 +87,7 @@ brew "mackup"
 # Mac App Store command-line interface
 brew "mas"
 # Java-based project management
-brew "maven"
+#brew "maven" #Java1.7+ is required
 # High-performance, schema-free, document-oriented database
 brew "mongodb"
 # Collection of tools that nobody wrote when UNIX was young
@@ -108,7 +108,7 @@ brew "openssl@1.1"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # Draw UML diagrams
-brew "plantuml"
+#brew "plantuml" #Java required to install this formula
 # Service monitoring system and time series database
 brew "prometheus"
 # Cross-platform application and UI framework
@@ -126,7 +126,7 @@ brew "s3cmd"
 # HTTP regression testing and benchmarking utility
 brew "siege"
 # Manage code quality
-brew "sonarqube"
+#brew "sonarqube" #Java1.8+ required to install formula
 # Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
 # Granddaddy of HTML tools, with support for modern standards
@@ -141,11 +141,11 @@ brew "vim"
 brew "watch"
 cask "beyond-compare"
 cask "dropbox"
-cask "gpgtools"
-cask "gpgtools-beta"
+#cask "gpgtools" #unavailable no Cask with this name exists
+#cask "gpgtools-beta" #unavailable no Cask with this name exists
 cask "intellij-idea"
 cask "iterm2"
-cask "ip-scanner"
+#cask "ip-scanner" #checksum failed
 cask "keybase"
 cask "postman"
 cask "qlcolorcode"
