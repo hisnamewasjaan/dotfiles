@@ -1,0 +1,24 @@
+// Dette er placeret i seperat fil i stedet for at benytte init.gradle, da Grails 3 ellers vil lave artifakter uden de fleste dependencies i .pom filen.
+// Grails 3 projekter skal selv medtage denne fil i deres build.gradle (før erst-release-plugin) vha: apply from: System.getProperty("user.home") + "/.gradle/erst-publish.gradle"
+// Desværre så kan erst-publish.gradle ikke både virke for Grails 3 plugins og applikationer, da den enten ikke laver war filer til applikationer eller fejler når den skal uploade plugin artifakter
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        webApp(MavenPublication) {
+            from components.web
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username repositoryUsername
+                password repositoryPassword
+            }
+            if (project.version.endsWith('-SNAPSHOT')) {
+                url "https://dev.erst.dk/artifactory/erst-snapshots-local"
+            } else {
+                url "https://dev.erst.dk/artifactory/erst-components-local"
+            }
+        }
+    }
+}

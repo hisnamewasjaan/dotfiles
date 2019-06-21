@@ -1,0 +1,45 @@
+// Dette er placeret i seperat fil i stedet for at benytte init.gradle, da Grails 3 ellers vil lave artifakter uden de fleste dependencies i .pom filen.
+// Grails 3 projekter skal selv medtage denne fil i deres build.gradle (før erst-release-plugin) vha: apply from: System.getProperty("user.home") + "/.gradle/erst-publish.gradle"
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            // medtag kompileret kode
+            from components.java
+             
+            // medtag source
+            if (project.tasks.findByName('sourceJar')) {
+                artifact sourceJar {
+                    classifier "sources"
+                }
+            }
+             
+            if(project.hasProperty('grailsVersion') && grailsVersion.take(1).toInteger()>=3) {
+                pom.withXml {
+                    Node pomNode = asNode()
+                    // simply remove dependencies without a version
+                    // version-less dependencies are handled with dependencyManagement
+                    // see https://github.com/spring-gradle-plugins/dependency-management-plugin/issues/8 for more complete solutions
+                    pomNode.dependencies.dependency.findAll {
+                        it.version.text().isEmpty()
+                    }.each {
+                        it.replaceNode {}
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username repositoryUsername
+                password repositoryPassword
+            }
+            if (project.version.endsWith('-SNAPSHOT')) {
+                url "https://dev.erst.dk/artifactory/erst-snapshots-local"
+            } else {
+                url "https://dev.erst.dk/artifactory/erst-components-local"
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+allprojects {
+    apply plugin: 'java'
+    buildscript {
+        repositories {
+            maven {
+                url "https://dev.erst.dk/artifactory/erst-repository"
+                credentials {
+                    username repositoryUsername
+                    password repositoryPassword
+                }
+            }
+            maven {
+                url "https://dev.erst.dk/artifactory/erst-snapshots-local"
+                credentials {
+                    username repositoryUsername
+                    password repositoryPassword
+                }
+            }
+            mavenLocal()
+        }
+    }
+    repositories {
+        maven {
+            url "https://dev.erst.dk/artifactory/erst-repository"
+            credentials {
+                username repositoryUsername
+                password repositoryPassword
+            }
+        }
+        maven {
+            url "https://dev.erst.dk/artifactory/erst-snapshots-local"
+            credentials {
+                username repositoryUsername
+                password repositoryPassword
+            }
+        }
+        mavenLocal()
+    }
+    if(!project.hasProperty('grailsVersion') || grailsVersion.take(1).toInteger()<3) {
+        apply from: System.getProperty("user.home") + "/.gradle/erst-publish.gradle"
+    }
+  
+    // medtag sources i artifacten
+    task sourceJar(type: Jar) {
+        from sourceSets.main.allSource
+    }
+}
