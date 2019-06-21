@@ -78,8 +78,6 @@ brew "libxml2"
 brew "libyaml"
 # Keep your Mac's application settings in sync
 brew "mackup"
-# Mac App Store command-line interface
-brew "mas"
 # Java-based project management
 brew "maven" #Java1.7+ is required
 # High-performance, schema-free, document-oriented database
@@ -133,36 +131,43 @@ brew "tree"
 brew "vim"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
+# Mac App Store command-line interface
+brew "mas"
 cask "beyond-compare"
 cask "dropbox"
 cask "intellij-idea"
+cask "jetbrains-toolbox"
+cask "docker"
 cask "iterm2"
 #cask "ip-scanner" #checksum failed
 cask "keybase"
 cask "postman"
+# This is a Quick Look plug-in that renders source code with syntax highlighting.
 cask "qlcolorcode"
 cask "qlmarkdown"
+#  Apple OSX QuickLook plugin that lets you view plain text files without a file extension
 cask "qlstephen"
 cask "quicklook-csv"
 cask "quicklook-json"
+# secure messaging
 cask "signal"
 cask "slack"
 cask "sourcetree"
 cask "sublime-text2"
 cask "spotify"
+# Validator S.A.C. (Stand Alone Complex) is a version of the W3C's HTML / XHTML Markup Validator for Mac OS X.
 cask "validator-sac"
 cask "visual-studio-code"
 cask "vlc"
-cask "whatsapp"
 cask "wireshark"
-mas "Gomoku-desktop", id: 457851462
-mas "iMovie", id: 408981434
-mas "iPhoto", id: 408981381
-mas "Ka-Block!", id: 1335413823
-mas "Keynote", id: 409183694
-mas "Kindle", id: 405399194
-mas "Numbers", id: 409203825
-mas "OmniGraffle", id: 1142578753
-mas "Pages", id: 409201541
-mas "Pocket", id: 568494494
-mas "Spark", id: 1176895641
+#mas "Gomoku-desktop", id: 457851462
+#mas "iMovie", id: 408981434
+#mas "iPhoto", id: 408981381
+#mas "Ka-Block!", id: 1335413823
+#mas "Keynote", id: 409183694
+#mas "Kindle", id: 405399194
+#mas "Numbers", id: 409203825
+#mas "OmniGraffle", id: 1142578753
+#mas "Pages", id: 409201541
+#mas "Pocket", id: 568494494
+#mas "Spark", id: 1176895641
