@@ -153,7 +153,6 @@ cask "quicklook-json"
 cask "signal"
 cask "slack"
 cask "sourcetree"
-cask "sublime-text2"
 cask "spotify"
 # Validator S.A.C. (Stand Alone Complex) is a version of the W3C's HTML / XHTML Markup Validator for Mac OS X.
 cask "validator-sac"
