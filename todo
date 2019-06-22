@@ -3,3 +3,7 @@ gpg signing commits?
 https://github.com/Homebrew/homebrew-bundle
 https://github.com/jkaving/intellij-colors-solarized
 https://stackoverflow.com/questions/5894946/how-to-add-gits-branch-name-to-the-commit-message
+
+# multiple git accounts
+https://www.wyeworks.com/blog/2018/01/15/automatically-managing-personal-and-work-git-configurations/
+https://stackoverflow.com/questions/9347458/switch-between-user-identities-in-one-git-on-one-computer

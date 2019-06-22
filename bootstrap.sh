@@ -4,6 +4,7 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
 
+# sync files from current dir to user home dir ~
 function doIt() {
 	rsync --exclude ".git/" \
 		--exclude "old/" \
