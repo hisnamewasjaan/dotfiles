@@ -11,7 +11,6 @@ function doIt() {
 		--exclude ".idea/" \
 		--exclude "dotfiles.iml" \
 		--exclude "todo" \
-		--exclude "init/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \

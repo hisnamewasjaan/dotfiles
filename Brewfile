@@ -138,13 +138,13 @@ cask "dropbox"
 cask "intellij-idea"
 cask "jetbrains-toolbox"
 cask "docker"
-cask "iterm2"
-#cask "ip-scanner" #checksum failed
-cask "keybase"
+cask "brave-browser"
 cask "postman"
+cask "keybase"
+cask "iterm2"
 # This is a Quick Look plug-in that renders source code with syntax highlighting.
 cask "qlcolorcode"
-cask "qlmarkdown"
+#cask "qlmarkdown" #virker ikke længere..
 #  Apple OSX QuickLook plugin that lets you view plain text files without a file extension
 cask "qlstephen"
 cask "quicklook-csv"
