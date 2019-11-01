@@ -16,6 +16,7 @@ brew "sqlite"
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+brew "bash-completion@2"
 # Informative, fancy bash prompt for Git users
 brew "bash-git-prompt"
 # Platform built on V8 to build network applications
@@ -56,6 +57,12 @@ brew "libffi"
 brew "glib"
 # Bash and Zsh completion for Gradle
 brew "gradle-completion"
+
+brew "maven-completion"
+brew "docker-completion"
+brew "docker-compose-completion"
+# SonarQube completions
+brew "sonar-completion"
 # Gorgeous metric visualizations and dashboards for timeseries databases
 brew "grafana"
 # Improved top (interactive process viewer)
@@ -77,7 +84,8 @@ brew "libxml2"
 # YAML Parser
 brew "libyaml"
 # Keep your Mac's application settings in sync
-brew "mackup"
+# giver problemer fordi nogle programmer ikke har de rigtige adgange til den symlinkede foldere
+#brew "mackup"
 # Java-based project management
 brew "maven" #Java1.7+ is required
 # High-performance, schema-free, document-oriented database
@@ -159,12 +167,12 @@ cask "validator-sac"
 cask "visual-studio-code"
 cask "vlc"
 cask "wireshark"
-#mas "Gomoku-desktop", id: 457851462
+# Keyboard modification/mapping
+cask "karabiner-elements"
 #mas "iMovie", id: 408981434
 #mas "iPhoto", id: 408981381
 #mas "Ka-Block!", id: 1335413823
 #mas "Keynote", id: 409183694
-#mas "Kindle", id: 405399194
 #mas "Numbers", id: 409203825
 #mas "OmniGraffle", id: 1142578753
 #mas "Pages", id: 409201541

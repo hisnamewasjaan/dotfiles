@@ -144,7 +144,7 @@ alias path='echo -e ${PATH//:/\\n}'
 
 
 # skift til java7 med sdkman
-alias j7='sdk u java 7u141-zulu'
+alias j7='sdk u java 7.0.222-zulu'
 
 
 # kogt
@@ -158,6 +158,7 @@ alias logsnineo="mount -t smbfs //ni_jbe@10.0.97.17/logs-nine ~/temp/logs-nine"
 
 # mount samba share - with keychain access
 alias logsnine='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/logs-nine\"" -e "end try"'
+alias logsninen='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/logs-nine\"" -e "end try"'
 
 alias smbSagsstyring='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagsstyring\"" -e "end try"'
 alias smbSagslager='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagslager\"" -e "end try"'

@@ -21,6 +21,20 @@
 	# Clone a repository including all submodules
 	c = clone --recursive
 
+	patch = add --patch
+	# add hunks of code interactively
+	# useful for separating a bunch of changes into logical commits
+
+
+	# amend to a previous commit:
+	#  git add file
+	#  git fixup HEAD^^
+	# will put the changes to 'file' to the commit two behind HEAD
+	fixup = !sh -c 'git commit --fixup $1 && \
+                  git stash && \
+                  git rebase -i $1~1 && \
+                  git stash pop' -
+
 	# Commit all changes
 	ca = !git add -A && git commit -av
 
@@ -167,6 +181,8 @@
 	prune = true
 
 [rebase]
+	# for fixup hotness later
+	autosquash = true
 	autoStash = true
 
 [pull]
@@ -200,5 +216,12 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
 [interactive]
+	# allow the user to provide one-letter input with a single key (i.e., without hitting enter). Currently this is used by the --patch mode of  git-add(1),  git-checkout(1), git-commit(1), git-reset(1), and git-stash(1).
 	singleKey = true
+
+[rerere]
+	enabled = true
+	# Reuse recorded resolution of conflicted merges
+	# see `man git-rerere'

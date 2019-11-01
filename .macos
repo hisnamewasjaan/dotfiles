@@ -2,6 +2,13 @@
 
 # ~/.macos — https://mths.be/macos
 
+
+# todos
+## safari show status bar by default
+## safari show full website address
+
+
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -27,6 +34,9 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
+
+# Disable power chime (when plugging in power)
+defaults write com.apple.PowerChime ChimeOnnoHardware -bool true
 
 # Set highlight color to green
 defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
@@ -622,8 +632,8 @@ EOD
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first
-defaults write com.apple.terminal FocusFollowsMouse -bool true
-defaults write org.x.X11 wm_ffm -bool true
+#defaults write com.apple.terminal FocusFollowsMouse -bool true
+#defaults write org.x.X11 wm_ffm -bool true
 
 # Enable Secure Keyboard Entry in Terminal.app
 # See: https://security.stackexchange.com/a/47786/8918
@@ -800,6 +810,7 @@ for app in "Activity Monitor" \
 	"Safari" \
 	"SystemUIServer" \
 	"Terminal" \
+	"PowerChime" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
