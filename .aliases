@@ -14,6 +14,8 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias g="git"
+alias gmr='git push --push-option merge_request.create --push-option merge_request.remove_source_branch'
+alias gtl='git tag --list --sort=-creatordate'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -151,14 +153,13 @@ alias j7='sdk u java 7.0.222-zulu'
 alias kogt='open -a /Applications/Firefox.app/  http://localhost:16391/kontrologtilsyn/'
 
 # erst
+alias erstvpn='sudo openconnect --authgroup=eogs -b -u j.bentzen https://vpn.erst.dk'
+#alias erstvpn='echo "eRWs32zMfe" | sudo openconnect --authgroup=eogs -b -u j.bentzen https://vpn.erst.dk --passwd-on-stdin'
+
 alias sag='cd ~/dev/erst/sag'
 
-# mount samba share - old school way
-alias logsnineo="mount -t smbfs //ni_jbe@10.0.97.17/logs-nine ~/temp/logs-nine"
-
 # mount samba share - with keychain access
-alias logsnine='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/logs-nine\"" -e "end try"'
-alias logsninen='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/logs-nine\"" -e "end try"'
+alias logsnine='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/logs-nine\"" -e "end try"'
 
 alias smbSagsstyring='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagsstyring\"" -e "end try"'
 alias smbSagslager='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagslager\"" -e "end try"'
@@ -171,3 +172,14 @@ alias gw="./gradlew --console=verbose"
 
 
 alias oraclejava8='export JAVA_HOME=$(/usr/libexec/java_home -v1.8)'
+
+# enable/disable ssh adgang
+alias enableRemoteLogin='sudo systemsetup -setremotelogin on'
+alias disableRemoteLogin='sudo systemsetup -setremotelogin off'
+
+# check tcp port ($PORT)
+## Prefix this with sudo to see processes you don't own
+# lsof -nP -i4TCP:$PORT | grep LISTEN
+
+# Oracle SqlDeveloper
+alias sqldeveloper="/Users/janbentzen/Downloads/SQLDeveloper.app/Contents/Resources/sqldeveloper/sqldeveloper/bin/sqldeveloper"
