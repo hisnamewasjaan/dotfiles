@@ -9,10 +9,10 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias db="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias d="cd ~/dev"
 alias g="git"
 alias gmr='git push --push-option merge_request.create --push-option merge_request.remove_source_branch'
 alias gtl='git tag --list --sort=-creatordate'
@@ -144,35 +144,6 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-
-# skift til java7 med sdkman
-alias j7='sdk u java 7.0.222-zulu'
-
-
-# kogt
-alias kogt='open -a /Applications/Firefox.app/  http://localhost:16391/kontrologtilsyn/'
-
-# erst
-alias erstvpn='sudo openconnect --authgroup=eogs -b -u j.bentzen https://vpn.erst.dk'
-#alias erstvpn='echo "eRWs32zMfe" | sudo openconnect --authgroup=eogs -b -u j.bentzen https://vpn.erst.dk --passwd-on-stdin'
-
-alias sag='cd ~/dev/erst/sag'
-
-# mount samba share - with keychain access
-alias logsnine='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/logs-nine\"" -e "end try"'
-
-alias smbSagsstyring='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagsstyring\"" -e "end try"'
-alias smbSagslager='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagslager\"" -e "end try"'
-alias smbSagsindeks='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagsindeks\"" -e "end try"'
-
-# Pipe my public key to my clipboard.
-alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
-
-alias gw="./gradlew --console=verbose"
-
-
-alias oraclejava8='export JAVA_HOME=$(/usr/libexec/java_home -v1.8)'
-
 # enable/disable ssh adgang
 alias enableRemoteLogin='sudo systemsetup -setremotelogin on'
 alias disableRemoteLogin='sudo systemsetup -setremotelogin off'
@@ -181,5 +152,42 @@ alias disableRemoteLogin='sudo systemsetup -setremotelogin off'
 ## Prefix this with sudo to see processes you don't own
 # lsof -nP -i4TCP:$PORT | grep LISTEN
 
+
+# skift til java7 med sdkman
+alias j7='sdk u java 7.0.222-zulu'
+
+
+# erst
+alias erstvpn='sudo openconnect --authgroup=eogs -b -u j.bentzen https://vpn.erst.dk'
+#alias erstvpn='echo "eRWs32zMfe" | sudo openconnect --authgroup=eogs -b -u j.bentzen https://vpn.erst.dk --passwd-on-stdin'
+
+alias sag='cd ~/dev/erst/sag'
+alias kogt='cd ~/dev/erst/kogt'
+alias pogo='cd ~/dev/erst/pogo'
+
+alias kogtlocal='open -a /Applications/Firefox.app/  http://localhost:16391/kontrologtilsyn/'
+alias pogolocal='open -a /Applications/Firefox.app/  http://localhost:20001/pogo-webservices/'
+
+# mount samba share - with keychain access
+alias logsnine='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/logs-nine\"" -e "end try"'
+
+alias smbSagsstyring='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagsstyring\"" -e "end try"'
+alias smbSagslager='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagslager\"" -e "end try"'
+alias smbSagsindeks='/usr/bin/osascript -e "try" -e "mount volume \"smb://ni_jbe@10.0.97.17/sagsindeks\"" -e "end try"'
+
+# Pipe jbe@nineconsult public key to my clipboard.
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
+alias oraclejava8='export JAVA_HOME=$(/usr/libexec/java_home -v1.8)'
+
 # Oracle SqlDeveloper
 alias sqldeveloper="/Users/janbentzen/Downloads/SQLDeveloper.app/Contents/Resources/sqldeveloper/sqldeveloper/bin/sqldeveloper"
+
+# grails clean, compile, test
+alias gct='./grailsw clean-all && ./grailsw compile && ./grailsw test-app'
+
+# run gradle wrapper verbose
+alias gw="./gradlew --console=verbose"
+
+# gradle clean, check
+alias gcc='./gradlew clean check'
