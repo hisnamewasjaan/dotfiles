@@ -152,11 +152,12 @@ cask "keybase"
 cask "iterm2"
 # This is a Quick Look plug-in that renders source code with syntax highlighting.
 cask "qlcolorcode"
-#cask "qlmarkdown" #virker ikke længere..
+cask "qlmarkdown"
 #  Apple OSX QuickLook plugin that lets you view plain text files without a file extension
 cask "qlstephen"
 cask "quicklook-csv"
 cask "quicklook-json"
+cask "qlvideo"
 # secure messaging
 cask "signal"
 cask "slack"
