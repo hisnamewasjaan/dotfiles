@@ -141,6 +141,8 @@ brew "vim"
 brew "watch"
 # Mac App Store command-line interface
 brew "mas"
+# TL-DR for man pages
+brew tldr
 cask "beyond-compare"
 cask "dropbox"
 cask "intellij-idea"
