@@ -1,0 +1,14 @@
+set imap_user = "hisnamewasjaan@gmail.com"
+set imap_pass = "Ev3-yH9-YV4-dgW"
+set smtp_url = "smtp://hisnamewasjaan@gmail.com@smtp.gmail.com:587/"
+set smtp_pass = "Ev3-yH9-YV4-dgW"
+set from = "hisnamewasjaan@gmail.com"
+set realname = "Jan Bentzen"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set header_cache = /Users/janbentzen/.mutt/cache/headers
+set message_cachedir = /Users/janbentzen/.mutt/cache/bodies
+set certificate_file = /Users/janbentzen/.mutt/certificates
+set move = no
+set smtp_authenticators = 'gssapi:login'
