@@ -190,3 +190,5 @@ alias gw="./gradlew --console=verbose"
 
 # gradle clean, check
 alias gcc='./gradlew clean check'
+
+alias gr5="./gradlew -g ~/.gradle5"
