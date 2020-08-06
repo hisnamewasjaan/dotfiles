@@ -180,3 +180,20 @@ function gr2() {
 	./grailsw compile
 	./grailsw test-app -unit
 }
+
+# base64 encode
+# Encode to / decode from Base64-URL without padding.
+function base64encode {
+	echo -n "$1" | openssl enc -a -A | tr -d '=' | tr '/+' '_-'
+}
+
+
+# base64 decode
+# Encode to / decode from Base64-URL without padding.
+function base64decode {
+  _l=$((${#1} % 4))
+  if [ $_l -eq 2 ]; then _s="$1"'=='
+  elif [ $_l -eq 3 ]; then _s="$1"'='
+  else _s="$1" ; fi
+  echo "$_s" | tr '_-' '/+' | openssl enc -d -a -A
+}

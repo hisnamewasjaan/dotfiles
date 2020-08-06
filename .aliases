@@ -16,6 +16,7 @@ alias d="cd ~/dev"
 alias g="git"
 alias gmr='git push --push-option merge_request.create --push-option merge_request.remove_source_branch'
 alias gtl='git tag --list --sort=-creatordate'
+alias mr='lab mr --open --remove_source_branch'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -158,8 +159,11 @@ alias j7='sdk u java 7.0.222-zulu'
 
 
 # erst
+# per agerbæk style
 alias erstvpn='sudo openconnect --authgroup=eogs -b -u j.bentzen https://vpn.erst.dk'
 #alias erstvpn='echo "eRWs32zMfe" | sudo openconnect --authgroup=eogs -b -u j.bentzen https://vpn.erst.dk --passwd-on-stdin'
+alias stopvpn='sudo pkill openconnect'
+
 
 alias sag='cd ~/dev/erst/sag'
 alias kogt='cd ~/dev/erst/kogt'
@@ -170,8 +174,11 @@ alias pogolocal='open -a /Applications/Firefox.app/  http://localhost:20001/pogo
 
 # mount samba share - with keychain access
 alias logsnine='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/logs-nine\"" -e "end try"'
+alias logsall='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/logs-all\"" -e "end try"'
+alias logsarchived='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/logs-all/operations/archived-logs\"" -e "end try"'
 alias smbpogo='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/pogo\"" -e "end try"'
 alias smbsagslager='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/sagslager\"" -e "end try"'
+alias smbkompensation='/usr/bin/osascript -e "try" -e "mount volume \"smb://smb_ni_jbe@samba.nonprod.es.local/kompensationsmodul\"" -e "end try"'
 
 
 # Pipe jbe@nineconsult public key to my clipboard.
@@ -184,11 +191,15 @@ alias sqldeveloper="/Users/janbentzen/Downloads/SQLDeveloper.app/Contents/Resour
 
 # grails clean, compile, test
 alias gct='./grailsw clean-all && ./grailsw compile && ./grailsw test-app'
+alias gcr='./grailsw clean-all && ./grailsw compile && ./grailsw run-app'
 
 # run gradle wrapper verbose
 alias gw="./gradlew --console=verbose"
 
 # gradle clean, check
 alias gcc='./gradlew clean check'
+alias gccc='./gradlew clean check -DENABLE_CLOVER=true'
+alias gctc='./gradlew clean test codenarcAll'
+alias gt='./gradlew test'
 
 alias gr5="./gradlew -g ~/.gradle5"
