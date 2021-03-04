@@ -143,6 +143,14 @@ brew "watch"
 brew "mas"
 # TL-DR for man pages
 brew tldr
+# Top-like interface for container metrics
+brew ctop
+# The lazier way to manage everything docker
+brew lazydocker
+# Modern replacement for 'ls'
+brew exa
+# Search tool like grep and The Silver Searcher
+brew rg
 cask "beyond-compare"
 cask "dropbox"
 cask "intellij-idea"
@@ -172,6 +180,8 @@ cask "vlc"
 cask "wireshark"
 # Keyboard modification/mapping
 cask "karabiner-elements"
+# Move and resize windows in macOS using keyboard shortcuts or snap areas
+cask "rectangle"
 #mas "iMovie", id: 408981434
 #mas "iPhoto", id: 408981381
 #mas "Ka-Block!", id: 1335413823
